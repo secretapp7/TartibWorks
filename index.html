@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TartibWorks</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen">
+    <div id="app" class="container mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-5">Welcome to TartibWorks</h1>
+        <div id="editor" class="border border-gray-300 rounded-lg p-4 bg-white shadow">
+            <textarea class="w-full h-96 p-2 border-2 border-gray-200" placeholder="Start typing..."></textarea>
+        </div>
+        <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Save</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        document.querySelector('button').addEventListener('click', async () => {
+            const content = document.querySelector('textarea').value;
+            alert(`Note saved to TartibWorks: ${content}`);
+        });
+    </script>
+</body>
+</html>
